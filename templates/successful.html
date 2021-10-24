@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename ='img/hfevicon.png') }}" type="image/x-icon">
+    <title>successfully</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <nav>
+            <a href="/"><img src="{{ url_for('static', filename ='img/hlogo.png') }}" alt="img"></a>
+            <!--<div class="navlinks">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/taketest">TAKE THE TEST</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="/login">LOGIN</a></li>
+                </ul>
+            </div>-->
+        </nav>
+    </div>
+    <br>
+    <div id='card' class="animated fadeIn">
+        <div id='upper-side2'>
+            <i class="fa fa-check"></i>
+            <h3 id='status'> Success </h3>
+        </div>
+        <div id='upper-side'>
+            <?xml version="1.0" encoding="utf-8"?>
+            <!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+            <svg version="1.1" id="checkmark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve">
+              <path d="M131.583,92.152l-0.026-0.041c-0.713-1.118-2.197-1.447-3.316-0.734l-31.782,20.257l-4.74-12.65
+          c-0.483-1.29-1.882-1.958-3.124-1.493l-0.045,0.017c-1.242,0.465-1.857,1.888-1.374,3.178l5.763,15.382
+          c0.131,0.351,0.334,0.65,0.579,0.898c0.028,0.029,0.06,0.052,0.089,0.08c0.08,0.073,0.159,0.147,0.246,0.209
+          c0.071,0.051,0.147,0.091,0.222,0.133c0.058,0.033,0.115,0.069,0.175,0.097c0.081,0.037,0.165,0.063,0.249,0.091
+          c0.065,0.022,0.128,0.047,0.195,0.063c0.079,0.019,0.159,0.026,0.239,0.037c0.074,0.01,0.147,0.024,0.221,0.027
+          c0.097,0.004,0.194-0.006,0.292-0.014c0.055-0.005,0.109-0.003,0.163-0.012c0.323-0.048,0.641-0.16,0.933-0.346l34.305-21.865
+          C131.967,94.755,132.296,93.271,131.583,92.152z" />
+              <circle fill="none" stroke="#ffffff" stroke-width="5" stroke-miterlimit="10" cx="109.486" cy="104.353" r="32.53" />
+            </svg>
+            <h3 id='status2'>
+                Success
+            </h3>
+        </div>
+        <div id='lower-side'>
+            <p id='message'>
+                Congratulations, your account has been successfully created.
+            </p>
+            <a href="/" id="contBtn">Continue</a>
+        </div>
+    </div>
+    </div>
+    <footer class="footer">
+        <p>Copyright &copy;</p>
+
+    </footer>
+    <q id="time"></q>
+    <script>
+        function time() {
+            time = new Date()
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(time, 1000)
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Comfortaa', cursive;
+        font-size: 18px;
+        color: #513131;
+    }
+    
+    body {
+        background-color: #ffe9fd;
+    }
+    
+    img {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        align-self: center;
+        align-content: flex-end;
+    }
+    
+    .logo {
+        display: flex;
+        width: 20px;
+    }
+    
+    nav {
+        display: flex;
+        padding: 2% 6%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        height: 3vh;
+        z-index: 10000;
+    }
+    
+    nav img {
+        width: 200px;
+        height: 120px;
+        border-radius: 50%;
+        border: 2px black;
+        position: relative;
+        top: 10px;
+    }
+    
+    .navlinks {
+        flex: 1;
+        text-align: right;
+    }
+    
+    .navlinks ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+    
+    .navlinks ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 15px;
+    }
+    
+    .navlinks ul li::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background-color: rgb(231, 13, 13);
+        display: block;
+        margin: auto;
+        transition: 0.5s;
+    }
+    
+    .navlinks ul li:hover::after {
+        width: 100%;
+    }
+    
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    .footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 12vh;
+        position: relative;
+    }
+    
+    #time {
+        text-align: center;
+        background-color: white;
+        color: black;
+        display: flex;
+        text-align: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+    
+    #card {
+        position: relative;
+        width: 320px;
+        display: block;
+        margin: 40px auto;
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    
+    #upper-side {
+        padding: 1em;
+        background-color: #c34abd;
+        display: block;
+        color: #fff;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+    
+    #upper-side2 {
+        padding: 1em;
+        background-color: #c34abd;
+        display: block;
+        color: #fff;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+    
+    #checkmark {
+        font-weight: lighter;
+        fill: #fff;
+        margin: -3.5em auto auto 20px;
+    }
+    
+    #status {
+        font-weight: lighter;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1em;
+        margin-top: -.2em;
+        margin-bottom: 0;
+    }
+    
+    #lower-side {
+        padding: 2em 2em 5em 2em;
+        background: #fff;
+        display: block;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+    
+    #message {
+        margin-top: -.5em;
+        color: #757575;
+        letter-spacing: 1px;
+    }
+    
+    #contBtn {
+        position: relative;
+        top: 1.5em;
+        text-decoration: none;
+        background: #c34abd;
+        color: #fff;
+        margin: auto;
+        padding: .8em 3em;
+        -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+        -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+        box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.21);
+        border-radius: 25px;
+        -webkit-transition: all .4s ease;
+        -moz-transition: all .4s ease;
+        -o-transition: all .4s ease;
+        transition: all .4s ease;
+    }
+    
+    #contBtn:hover {
+        -webkit-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+        -moz-box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+        box-shadow: 0px 15px 30px rgba(50, 50, 50, 0.41);
+        -webkit-transition: all .4s ease;-moz-transition: all .4s ease;
+        -o-transition: all .4s ease;
+        transition: all .4s ease;
+    }
+</style>
